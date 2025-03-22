@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-100 py-8 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-lg font-semibold text-rose-500">CharityOrg</h3>
+          <h3 className="text-lg font-semibold text-rose-500">Mission 180</h3>
           <p className="text-gray-600 mt-2">
             Together, we can change the world.
           </p>
@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-rose-500">Quick Links</h3>
           <ul className="mt-2 space-y-2">
             <li>
-              <a href="/about" className="text-gray-600 hover:text-rose-500">
+              <a href="" className="text-gray-600 hover:text-rose-500">
                 About
               </a>
             </li>
             <li>
-              <a href="/projects" className="text-gray-600 hover:text-rose-500">
+              <a href="" className="text-gray-600 hover:text-rose-500">
                 Projects
               </a>
             </li>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="mt-8 text-center text-gray-600">
-        &copy; 2025 CharityOrg. All rights reserved.
+        &copy; 2025 Mission180. All rights reserved.
       </div>
     </footer>
   );
