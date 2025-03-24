@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../Button";
+import Logo from "../../assets/Logo.jpg";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -28,9 +29,7 @@ const Navbar: React.FC = () => {
         { label: "Vision, Mission & Purpose", path: "/mission" },
       ],
     },
-    { label: "News Letters", path: "/news" },
-    { label: "Children's Homes", path: "/children-homes" },
-    { label: "Photos", path: "/photos" },
+    { label: "Gallery", path: "/gallery" },
     {
       label: "Projects",
       path: "",
@@ -39,10 +38,10 @@ const Navbar: React.FC = () => {
         { label: "Community Involvement", path: "/community-involvement" },
       ],
     },
-    { label: "Contact", path: "/contact" },
     { label: "Visit Us", path: "/visit-us" },
     { label: "Donate", path: "/donate" },
     { label: "Promo Video", path: "/promo-video" },
+    { label: "Contact", path: "/contact" },
   ];
 
   const toggleMobileMenu = () => {
@@ -56,15 +55,16 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed w-full top-0 left-0 px-4 md:px-10 py-4 flex justify-between items-center text-white z-50 transition-all duration-300 ${
-        location.pathname !== "/"
-          ? "bg-black opacity-90 backdrop-blur-md"
-          : isScrolled
-          ? "bg-black opacity-90 backdrop-blur-md"
-          : "bg-transparent"
+        isScrolled ? "bg-black opacity-90 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       {/* Logo */}
-      <Link to="/" className="text-2xl font-bold">
+      <Link to="/" className="text-xl font-bold flex justify-center items-center gap-1 italic">
+        <img
+          src={Logo}
+          alt="Mission 180 Logo"
+          className="h-6 w-6 md:h-10 md:w-10 rounded-full object-cover"
+        />
         Mission 180
       </Link>
 
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center justify-between">
               <Link
                 to={item.path}
-                className={`text-sm uppercase flex items-center gap-1 transition-all ${
+                className={`text-xs font-semibold uppercase flex items-center gap-1 transition-all ${
                   location.pathname === item.path || hoveredItem === item.label
                     ? "text-rose-500"
                     : "hover:text-rose-500"

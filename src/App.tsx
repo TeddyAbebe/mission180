@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import Projects from "./pages/Projects";
+import Gallery from "./pages/Gallery";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/projects" element={<Projects />} />

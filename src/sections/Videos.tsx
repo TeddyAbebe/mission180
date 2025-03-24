@@ -12,17 +12,18 @@ const Videos: React.FC = () => {
           <div className="aspect-w-16 h-80">
             <iframe
               className="w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/pfWFq3G7NI4"
-              title="YouTube video 1"
+              src="https://www.youtube.com/embed/LdFiF8ByLEg?autoplay=1&mute=1"
+              title="Mission 180 Promo Video"
               allowFullScreen
+              allow="autoplay"
             ></iframe>
           </div>
 
           <div className="aspect-w-16 h-80">
             <iframe
               className="w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/iY7XgCOTXaU"
-              title="YouTube video 2"
+              src="https://www.youtube.com/embed/RVIdiwxSe54"
+              title="YouTube video 1"
               allowFullScreen
             ></iframe>
           </div>
