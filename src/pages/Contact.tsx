@@ -1,44 +1,19 @@
 import React from "react";
 import Button from "../components/Button";
 import DonateBanner from "../assets/DonateBanner.jpg";
+import BannerSection from "../components/BannerSection";
 
 const Contact: React.FC = () => {
   return (
     <section>
-      {/* DonateBanner Section */}
-      <div className="relative">
-        <div
-          className="relative w-full h-[500px] sm:h-[600px] bg-cover bg-center flex items-center"
-          style={{ backgroundImage: `url(${DonateBanner})` }}
-        >
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="text-left">
-              <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
-                Contact Us
-              </h1>
-              <p className="text-white text-lg sm:text-xl lg:text-2xl mt-4 max-w-md italic">
-                "We’d love to hear from you!"
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Title Section */}
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="absolute bottom-0 md:w-[70%] mx-auto left-0 right-0 transform translate-y-1/2 sm:translate-y-[57%] bg-gray-100 rounded-t-lg p-2 md:p-6 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-              Get in Touch
-            </h2>
-            <div className="w-20 h-1 bg-rose-500 mx-auto my-6"></div>
-            <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto text-justify">
-              Have questions or want to get involved? Reach out to us! Our team
-              is here to assist you and provide more information about
-              Mission:180 Ministries.
-            </p>
-          </div>
-        </div>
-      </div>
+      <BannerSection
+        bannerTitle="Contact Us"
+        bannerQuote='"We’d love to hear from you!"'
+        bannerQuoteAuthor=""
+        title="Get in Touch"
+        description={`Have questions or want to get involved? Reach out to us! Our team is here to assist you and provide more information about Mission:180 Ministries.`}
+        backgroundImage={DonateBanner}
+      />
 
       {/* Contact Form and Info Section */}
       <div className="bg-gray-100 pt-40 sm:pt-56 pb-12">

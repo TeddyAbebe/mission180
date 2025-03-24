@@ -38,9 +38,9 @@ const Navbar: React.FC = () => {
         { label: "Community Involvement", path: "/community-involvement" },
       ],
     },
-    { label: "Visit Us", path: "/visit-us" },
+    // { label: "Visit Us", path: "/visit-us" },
     { label: "Donate", path: "/donate" },
-    { label: "Promo Video", path: "/promo-video" },
+    // { label: "Promo Video", path: "/promo-video" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -59,7 +59,10 @@ const Navbar: React.FC = () => {
       }`}
     >
       {/* Logo */}
-      <Link to="/" className="text-xl font-bold flex justify-center items-center gap-1 italic">
+      <Link
+        to="/"
+        className="text-xl font-bold flex justify-center items-center gap-1 italic"
+      >
         <img
           src={Logo}
           alt="Mission 180 Logo"
@@ -143,7 +146,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={subItem.label}
                     to={subItem.path}
-                    className="block px-4 py-2 hover:bg-rose-500 hover:text-white transition-colors duration-200"
+                    className="block text-xs px-4 py-2 hover:bg-rose-500 hover:text-white transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {subItem.label}

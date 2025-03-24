@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -14,7 +15,8 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
 }) => {
   const baseStyles =
-    "px-6 py-3 rounded-full font-semibold transition-all duration-300";
+    "px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer";
+
   const variantStyles =
     variant === "primary"
       ? "bg-rose-500 text-white hover:bg-rose-600"
@@ -23,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles} ${className}`}
+      className={clsx(baseStyles, variantStyles, className)}
     >
       {children}
     </button>
