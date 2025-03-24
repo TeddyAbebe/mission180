@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../components/Button";
-import DonateBanner from "../assets/DonateBanner.jpg";
+import ContactBanner from "../assets/ContactBanner.jpg";
 import BannerSection from "../components/BannerSection";
 
 const Contact: React.FC = () => {
@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
         bannerQuoteAuthor=""
         title="Get in Touch"
         description={`Have questions or want to get involved? Reach out to us! Our team is here to assist you and provide more information about Mission:180 Ministries.`}
-        backgroundImage={DonateBanner}
+        backgroundImage={ContactBanner}
       />
 
       {/* Contact Form and Info Section */}

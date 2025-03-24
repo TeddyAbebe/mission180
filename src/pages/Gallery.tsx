@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Banner from "../assets/DonateBanner.jpg";
+import GalleryBanner from "../assets/GalleryBanner.jpg";
 import Image1 from "../assets/Image1.jpg";
 import Image2 from "../assets/Image2.jpg";
 import Image3 from "../assets/Image3.jpg";
@@ -36,7 +36,7 @@ const Gallery = () => {
         bannerQuoteAuthor=""
         title="Our Featured Moments"
         description={`Discover breathtaking landscapes, cityscape, and serene views captured in our gallery. Each image tells a unique story of its own.`}
-        backgroundImage={Banner}
+        backgroundImage={GalleryBanner}
       />
 
       {/* Gallery Slider */}
