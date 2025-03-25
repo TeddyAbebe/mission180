@@ -4,7 +4,7 @@ import BannerSection from "../components/BannerSection";
 
 import Image1 from "../assets/Gallery/Koko-Bedroom-1.jpg";
 import Image2 from "../assets/Gallery/Koko-Bedroom-2.jpg";
-import Image3 from "../assets/Gallery/Koko-Bedroom-3.jpg";
+import Image3 from "../assets/Gallery/Koko-bedroom-3.jpg";
 import Image4 from "../assets/Gallery/Koko-Potty-room.jpg";
 import Image5 from "../assets/Gallery/Kokos-House-Family.jpg";
 import Image6 from "../assets/Gallery/Kokos-House.jpg";
