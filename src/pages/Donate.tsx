@@ -178,7 +178,7 @@ const Donate: React.FC = () => {
                 <img
                   src={item.images[0]}
                   alt={item.title}
-                  className="w-full h-[250px] sm:h-[300px] object-cover"
+                  className="w-full h-56 object-cover"
                 />
                 {/* Black overlay */}
                 <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -203,7 +203,7 @@ const Donate: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2 text-slate-600 hover:text-slate-800 cursor-pointer hover:scale-110 transition-transform hover:bg-slate-300 rounded-xs "
+              className="absolute top-2 right-2 hover:bg-rose-900 hover:text-white opacity-80 cursor-pointer hover:scale-110 transition-transform rounded-xs "
               onClick={handleCloseModal}
             >
               <IoMdClose />
@@ -230,7 +230,9 @@ const Donate: React.FC = () => {
               {selectedItem.description}
             </div>
 
-            <Button className="rounded-md mt-4 px-10 mx-auto">Donate</Button>
+            <Button className="px-4 mt-2 bg-rose-900 text-white text-md font-light rounded-md mx-auto">
+              Donate
+            </Button>
           </div>
         </div>
       )}

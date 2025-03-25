@@ -28,7 +28,7 @@ const Sponsors: React.FC = () => {
           {donationOptions.map((item, index) => (
             <div
               key={index}
-              className="relative rounded-lg shadow-lg overflow-hidden"
+              className="relative rounded-lg overflow-hidden cursor-pointer transform transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={item.img}
@@ -36,7 +36,10 @@ const Sponsors: React.FC = () => {
                 className="w-full h-56 object-cover"
               />
 
-              <h3 className="text-white text-lg absolute bg-gray-800 opacity-80 bottom-4 left-2 px-4 py-1 rounded-md ">
+              {/* Black overlay */}
+              <div className="absolute inset-0 bg-black opacity-20"></div>
+
+              <h3 className="text-white text-sm absolute bg-rose-900 opacity-80 bottom-4 left-2 px-4 py-1 rounded-md">
                 {item.title}
               </h3>
             </div>
@@ -46,7 +49,7 @@ const Sponsors: React.FC = () => {
         {/* Button */}
         <Link
           to="/donate"
-          className="mt-10 inline-block px-6 py-3 bg-rose-500 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-rose-600 transition-all"
+          className="mt-10 inline-block px-4 py-2 bg-rose-500 text-white text-md font-light rounded-lg shadow-md hover:bg-rose-600 transition-all"
         >
           See More Options
         </Link>

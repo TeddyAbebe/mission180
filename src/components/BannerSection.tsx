@@ -49,7 +49,7 @@ const BannerSection: React.FC<BannerSectionProps> = ({
           <div className="w-20 h-1 bg-rose-500 mx-auto my-6"></div>
           {/* Render description with HTML */}
           <p
-            className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto text-justify"
+            className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto text-justify sm:text-left"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
