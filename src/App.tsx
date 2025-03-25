@@ -10,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import WaterProject from "./pages/Projects/WaterProject";
 import CommunityInvolvement from "./pages/Projects/CommunityInvolvement";
 import Staff from "./pages/Staff";
+import Mission from "./pages/Mission";
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
               path="/community-involvement"
               element={<CommunityInvolvement />}
             />
+            <Route path="/mission" element={<Mission />} />
           </Routes>
         </main>
         <Footer />
