@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import Slider from "react-slick";
-import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import JasonHazel from "../assets/JasonHazel.jpeg";
 import Jennifer from "../assets/Jennifer.jpg";
 import MarkNancy from "../assets/MarkNancy.jpg";
@@ -22,7 +20,7 @@ const staffMembers = [
       This means she manages all things school-related—no small task with more than 50 children in school!<br/><br/>
       Jason and Hazel live and work together in Nairobi, Kenya.
     `,
-    images: [JasonHazel, JasonHazel],
+    image: JasonHazel,
   },
   {
     name: "Jennifer Sheppard",
@@ -38,7 +36,7 @@ const staffMembers = [
       This trip had changed everything, and she could not wait to get back to the continent of Africa. <br/><br/>
       Jennifer would not hesitate to tell you her heart is here in Kenya, with the children and staff we serve as part of Mission:180!
     `,
-    images: [Jennifer, Jennifer],
+    image: Jennifer,
   },
   {
     name: "Nina Krause",
@@ -50,7 +48,7 @@ const staffMembers = [
       She brings years of experience and know-how to the team, particularly in the area of charitable finances and CRA compliance. <br/>
       She is an invaluable member of this team, and we are blessed to have her serve with us.
     `,
-    images: [Nina, Nina],
+    image: Nina,
   },
   {
     name: "Mark and Nancy Emde",
@@ -64,28 +62,9 @@ const staffMembers = [
       To say she served with excellence and integrity would be an understatement. <br/>
       We are blessed to have these two as members of Team Mission:180 and consider them dear and close friends.
     `,
-    images: [MarkNancy, MarkNancy],
+    image: MarkNancy,
   },
 ];
-
-// Custom slider arrows
-const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
-  <div
-    className="absolute top-1/2 -left-5 transform -translate-y-1/2 bg-black/70 text-white p-1 rounded-full cursor-pointer z-10"
-    onClick={onClick}
-  >
-    <MdOutlineArrowLeft size={24} />
-  </div>
-);
-
-const CustomNextArrow = ({ onClick }: { onClick?: () => void }) => (
-  <div
-    className="absolute top-1/2 -right-5 transform -translate-y-1/2 bg-black/70 text-white p-1 rounded-full cursor-pointer z-10"
-    onClick={onClick}
-  >
-    <MdOutlineArrowRight size={24} />
-  </div>
-);
 
 const Staff = () => {
   const [selectedMember, setSelectedMember] = useState<
@@ -98,16 +77,6 @@ const Staff = () => {
 
   const handleCloseModal = () => {
     setSelectedMember(null);
-  };
-
-  const carouselSettings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
   };
 
   return (
@@ -131,11 +100,10 @@ const Staff = () => {
                 onClick={() => handleCardClick(member)}
               >
                 <img
-                  src={member.images[0]}
+                  src={member.image}
                   alt={member.name}
                   className="w-full h-56 object-cover"
                 />
-
                 <h3 className="text-white text-sm absolute bg-rose-900 opacity-80 bottom-4 left-2 px-4 py-1 rounded-md">
                   {member.name}
                 </h3>
@@ -162,18 +130,12 @@ const Staff = () => {
               <IoMdClose />
             </button>
 
-            {/* Image Slider */}
-            <Slider {...carouselSettings}>
-              {selectedMember.images.map((image, index) => (
-                <div key={index}>
-                  <img
-                    src={image}
-                    alt={selectedMember.name}
-                    className="w-full h-56 object-contain rounded-md"
-                  />
-                </div>
-              ))}
-            </Slider>
+            {/* Displaying Single Image */}
+            <img
+              src={selectedMember.image}
+              alt={selectedMember.name}
+              className="w-full h-56 object-contain rounded-md"
+            />
 
             <h2 className="text-2xl font-semibold mt-8">
               {selectedMember.name}
