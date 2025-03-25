@@ -177,7 +177,7 @@ const Donate: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2"
+              className="absolute top-2 right-2 hover:bg-rose-900 hover:text-white opacity-80 cursor-pointer hover:scale-110 transition-transform rounded-xs "
               onClick={handleCloseModal}
             >
               <IoMdClose />

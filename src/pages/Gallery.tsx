@@ -101,24 +101,27 @@ const Gallery = () => {
       {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="p-6 rounded-lg shadow-lg w-[50vw] h-[80vh] flex flex-col items-center relative"
+            className="p-6 rounded-lg shadow-lg w-[90vw] md:w-[50vw] h-[70vh] md:h-[80vh] max-w-lg md:max-w-2xl flex flex-col items-center relative"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
-              className="absolute right-0 top-0 text-white text-4xl px-2 cursor-pointer rounded-md hover:bg-rose-900 opacity-80"
+              className="absolute right-2 top-2 text-3xl md:text-4xl px-2 cursor-pointer rounded-md hover:bg-rose-900 text-white transition"
               onClick={() => setSelectedImage(null)}
             >
               <IoCloseOutline />
             </button>
 
-            <h3 className="text-white text-xl font-semibold  bg-rose-900 opacity-80 px-4 py-1 rounded-md">
+            {/* Title */}
+            <h3 className="text-white text-lg md:text-xl font-semibold bg-rose-900 opacity-80 px-4 py-1 rounded-md mb-4 text-center">
               {selectedImage.title.replace(/-/g, " ")}
             </h3>
 
+            {/* Image */}
             <img
               src={selectedImage.src}
               alt={selectedImage.title}
